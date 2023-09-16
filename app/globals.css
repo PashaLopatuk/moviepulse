@@ -16,6 +16,12 @@
   }
 }
 
+input :focus {
+  outline-color: #84cc16;
+  border-color: #84cc16;
+  accent-color: #84cc16;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
