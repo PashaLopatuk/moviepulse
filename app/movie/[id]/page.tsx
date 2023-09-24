@@ -34,7 +34,7 @@ const page = ({ params }: { params: { id: string } }) => {
 		<div>
 			{
 				isLoading ?
-					<div className="">Loading...</div>
+					<div className="fixed w-100 h-80 t-20 bg-black text-3xl">Loading...</div>
 					:
 
 					<div className="space-y-4">
@@ -158,7 +158,7 @@ const page = ({ params }: { params: { id: string } }) => {
 								}
 							</div>
 						</div>
-						
+
 						<div className="">
 
 						</div>

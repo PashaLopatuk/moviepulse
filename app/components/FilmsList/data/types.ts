@@ -26,13 +26,13 @@ export interface ShowType {
 }
 
 export interface ServerResponse {
-  d: Show[];
+  d: ShowType[];
   q: string;
   v: number;
 }
 
 export interface showsStoreType { 
-    shows: Show[]
+    shows: ShowType[]
     isLoading: boolean,
     errors: [],
 
