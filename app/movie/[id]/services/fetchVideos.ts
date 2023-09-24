@@ -1,7 +1,7 @@
 import axios from "axios";
 import { videosResponseType } from "../types";
 
-export default async function loadMovies (id: string) {
+export default async function fetchVideos (id: string) {
     const options = {
         method: 'GET',
         url: `https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`,

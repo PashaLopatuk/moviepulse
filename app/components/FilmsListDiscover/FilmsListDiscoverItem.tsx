@@ -11,7 +11,7 @@ const FilmsListDiscoverItem = (movie: Movie) => {
        <Link href={
         'movie/' + movie.id
        }
-       className='rounded-2xl hover:bg-gray-900  flex space-x-3 h-40'
+       className='rounded-2xl hover:bg-neutral-900  flex space-x-3 h-40'
        >
        <img 
         src={'https://image.tmdb.org/t/p/w500' + movie.poster_path} 
