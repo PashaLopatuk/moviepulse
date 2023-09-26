@@ -30,11 +30,14 @@ const FilmsListDiscover = () => {
     const handleScroll = () => {
       // Check if the targetDiv is in the viewport
       if (nextPageRef.current) {
-        const { top, bottom } = nextPageRef.current.getBoundingClientRect();
-        const isDivInViewport = top >= 0 && bottom <= window.innerHeight;
-        // console.log('Is div in viewport:', isDivInViewport);
-        if (isDivInViewport) {
-          setpageNum( (x) => x + 1 )
+        if (nextPageRef.current) {
+          const element = nextPageRef.current as HTMLDivElement;  // Приведення типу до HTMLDivElement
+          const { top, bottom } = element.getBoundingClientRect();
+          const isDivInViewport = top >= 0 && bottom <= window.innerHeight;
+          
+          if (isDivInViewport) {
+            setpageNum(x => x + 1);
+          }
         }
       }
     }

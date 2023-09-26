@@ -84,8 +84,8 @@ const page = ({ params }: { params: { id: string } }) => {
 
 						<iframe
 							src={`https://www.youtube.com/embed/${videos?.at(0).key}`}
-							className='w-full h-[30vh]'
-							width={videos?.at(0)?.size}
+							className='w-full h-[30vh] sm:max-w-[35rem] mx-auto'
+							// width={videos?.at(0)?.size}
 						></iframe>
 
 						<div className="grid grid-cols-2">
@@ -100,7 +100,7 @@ const page = ({ params }: { params: { id: string } }) => {
 								className='w-35 object-contain'
 							/>
 
-							<div className="px-1 flex flex-col justify-between">
+							<div className="px-1 flex flex-col justify-between md:justify-start">
 								<ul className="flex space-x-2 pl-2 py-3">
 									{
 										movieData
@@ -114,7 +114,7 @@ const page = ({ params }: { params: { id: string } }) => {
 											))
 									}
 								</ul>
-								<div className="px-4 text-md text-neutral-200 overflow-hidden whitespace-wrap ">
+								<div className="px-4 text-md text-neutral-200 overflow-hidden whitespace-wrap md:overflow-auto md:whitespace-normal">
 									{
 										movieData.overview
 									}..

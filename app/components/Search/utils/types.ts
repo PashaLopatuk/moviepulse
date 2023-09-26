@@ -1,4 +1,5 @@
 export type searchStoreType = {
+    [key: string]: any
     query: string
     include_adult: boolean
     language: string
