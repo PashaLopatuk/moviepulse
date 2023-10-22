@@ -12,8 +12,8 @@ import fetchTMDB from '@/app/shared/services/fetchTMDB'
 const page = ({ params }: { params: { id: string } }) => {
 
 	const movieData = useDataStore<movieDetailsType>((state) => state.movieData)
-	const loadData = useDataStore((state) => state.loadData)
-	const isLoading: boolean = useDataStore((state) => state.isLoading)
+	const loadData = useDataStore<movieDetailsType>((state) => state.loadData)
+	const isLoading: boolean = useDataStore<movieDetailsType>((state) => state.isLoading)
 
 	useEffect(() => {
 		loadData(params.id)
@@ -54,7 +54,7 @@ const page = ({ params }: { params: { id: string } }) => {
 										}
 									</span> <span className="font-semibold">
 										{
-											movieData?.release_date.slice(0, 4)
+											movieData?.release_date?.slice(0, 4)
 										}
 									</span>
 								</div>
