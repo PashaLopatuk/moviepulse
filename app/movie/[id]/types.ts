@@ -46,3 +46,9 @@ export type videosResponseType = {
   id: number
   results: Video[]
 }
+
+export type DataStoreType = {
+  isLoading: boolean
+  movieData: movieDetailsType
+  loadData: (id: string) => void
+} 

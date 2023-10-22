@@ -1,8 +1,9 @@
 import { create } from 'zustand'
 import loadData from '../services/loadData'
+import { DataStoreType } from '../types'
 
-const useDataStore = create((set) => ({
-  isloading: true,
+const useDataStore = create<DataStoreType>((set) => ({
+  isLoading: true,
   movieData: {
     adult: false,
     backdrop_path: null,
