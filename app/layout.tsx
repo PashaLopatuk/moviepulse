@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <Link href={'/'} className='text-lime-500 pointer font-bold'>Back</Link>
+        {/*<Link href={'/'} className='text-lime-500 pointer font-bold'>Back</Link>*/}
         <main>
           {children}
         </main>

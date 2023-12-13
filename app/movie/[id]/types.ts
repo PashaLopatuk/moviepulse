@@ -12,7 +12,12 @@ export type movieDetailsType = {
   overview: string;
   popularity: number;
   poster_path: string | null;
-  production_companies: any[]; // You can replace 'any' with a more specific type if you have production company data structure.
+  production_companies: {
+    id: number
+    logo_path: string
+    name: string
+    origin_country: string
+  }[]; // You can replace 'any' with a more specific type if you have production company data structure.
   production_countries: {
     iso_3166_1: string;
     name: string;
