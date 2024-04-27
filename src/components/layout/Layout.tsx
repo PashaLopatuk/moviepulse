@@ -1,24 +1,30 @@
-import {getTranslation} from "@/i18n";
 import {Inter} from "next/font/google";
 
-const inter = Inter({subsets: ["latin", "cyrillic"]});
-import "@/app/[language]/globals.css";
+import {getTranslation} from "@/i18n";
 import Header from "@/components/layout/Header";
+
+
+import "@/app/[language]/globals.css";
+
+const inter = Inter({subsets: ["latin", "cyrillic"]});
+
+import Providers from '@/shared/providers'
+
 
 export default async function Layout(
   {
     children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) {
+  }: LayoutProps) {
   const {i18n} = await getTranslation()
   return (
     <html lang={i18n.resolvedLanguage}>
     <body className={inter.className}>
-    <Header/>
-    <div className="">
-      {children}
-    </div>
+    <Providers>
+      <Header/>
+      <div className="max-w-wrapper">
+        {children}
+      </div>
+    </Providers>
     </body>
     </html>
   );
