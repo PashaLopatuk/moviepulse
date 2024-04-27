@@ -26,7 +26,6 @@ export async function getTranslation(lng?: string, namespace?: string, options: 
     lng ??= fallbackLng
     namespace ??= defaultNS
 
-    // console.log('index.ts usetranslation: ', { lng, namespace })
     const i18nextInstance = await initI18next(lng, namespace)
     return {
         t: i18nextInstance.getFixedT(lng, Array.isArray(namespace) ? namespace[0] : namespace, options.keyPrefix),

@@ -1,9 +1,10 @@
-import React from 'react';
+import React from 'react'
+
+import {redirect} from "next/navigation";
+import {twMerge} from 'tailwind-merge';
 
 import {Button} from '@/components/ui/button';
 import {Separator} from '@/components/ui/separator';
-import {twMerge} from 'tailwind-merge';
-import {redirect} from "next/navigation";
 
 export default function SidebarNavigationMenu(
   {

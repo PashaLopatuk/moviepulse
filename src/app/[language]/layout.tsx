@@ -18,9 +18,7 @@ export function generateStaticParams() {
 
 export default async function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: LayoutProps) {
   const { i18n } = await getTranslation()
   return (
     <Layout>
