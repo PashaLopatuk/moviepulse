@@ -30,7 +30,7 @@ const Header = () => {
           <Sheet>
             <SheetTrigger className="sm:hidden" asChild>
               <Button variant="ghost">
-                <BurgerIcon/>
+                <BurgerIcon className={'min-w-14 min-h-14'} />
               </Button>
             </SheetTrigger>
             <SheetContent
