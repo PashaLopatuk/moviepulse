@@ -43,7 +43,10 @@ export default abstract class MovieApiManager {
     });
     try {
       return await axiosConfig.get<MovieDetails>(
-        this.paths.movieDetails + '/' + movie_id
+        this.paths.movieDetails + '/' + movie_id,
+        {
+          params: searchParams
+        }
       );
     } catch (error) {
       return undefined

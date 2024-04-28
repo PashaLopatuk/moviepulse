@@ -5,7 +5,6 @@ const Trending = async () => {
   const Movies = await MovieApiManager.getTrendingMovies()
   const isSuccess = Movies?.status === 200 && typeof Movies === 'object' && 'data' in Movies
 
-  console.log('Response: ', Movies)
 
   return (
     <ul className={`

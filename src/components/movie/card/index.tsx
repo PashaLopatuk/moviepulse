@@ -13,7 +13,7 @@ type MovieCardProps = {
 const MovieCard: FC<MovieCardProps> = ({movie}) => (
   <Link
     href={'/movie/' + movie?.id}
-    className={'flex justify-center'}
+    className={'flex justify-center hover:bg-lime-500 transition-all duration-500'}
   >
     {movie && (
       <Image
