@@ -6,4 +6,5 @@ declare global {
   }>
 
   type SetState<T> = Dispatch<SetState<T>>
+
 }

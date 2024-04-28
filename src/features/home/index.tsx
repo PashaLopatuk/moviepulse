@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import {FireIcon} from "@/shared/assets/icons";
-import { DrivePosterImage, BladeRunnerPosterImage, GrayManPosterImage} from '@/shared/assets/images'
+import {DrivePosterImage, BladeRunnerPosterImage, GrayManPosterImage} from '@/shared/assets/images'
+import Trending from "@/features/home/components/Trending";
 
 const page = () => {
   return (
@@ -12,7 +13,7 @@ const page = () => {
             shadow-animation
             lg:gap-20
         ">
-        <div className="">
+        <article className="">
           <h3 className="font-extrabold text-4xl lg:text-6xl">
             Find movies
           </h3>
@@ -33,7 +34,7 @@ const page = () => {
               Discover
             </button>
           </Link>
-        </div>
+        </article>
         <div className="relative right-0 opacity-65 md:opacity-90 lg:scale-150">
           <Image
             src={DrivePosterImage.src}
@@ -41,6 +42,9 @@ const page = () => {
             className="w-[10rem] absolute bottom-20 left-5 z-[0]"
             width={663}
             height={1000}
+            placeholder={"blur"}
+            blurDataURL={DrivePosterImage.src}
+            loading="lazy"
           />
 
           <Image
@@ -49,6 +53,9 @@ const page = () => {
             className="w-[10rem] z-[50]"
             width={663}
             height={1000}
+            placeholder={"blur"}
+            blurDataURL={BladeRunnerPosterImage.src}
+            loading="lazy"
           />
 
           <Image
@@ -57,22 +64,10 @@ const page = () => {
             className="w-[10rem] absolute top-20 left-10"
             width={663}
             height={1000}
+            placeholder={"blur"}
+            blurDataURL={GrayManPosterImage.src}
+            loading="lazy"
           />
-          {/*<img*/}
-          {/*  src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/070ec2214ca241a2f56dd13d7f33bc93f112137c2e9190d0931bc6f85da64ab2._RI_TTW_.jpg"*/}
-          {/*  alt=""*/}
-          {/*  className="w-[10rem] absolute bottom-20 left-5 z-[0]"*/}
-          {/*/>*/}
-
-          {/*<img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/9ce75157565137.59db4c0ec6577.png"*/}
-          {/*     alt=""*/}
-          {/*     className="w-[10rem] z-[50]"*/}
-          {/*/>*/}
-
-          {/*<img src="https://i.ebayimg.com/images/g/7LYAAOSwrXhiuV1R/s-l1200.jpg"*/}
-          {/*     alt=""*/}
-          {/*     className="w-[10rem] absolute top-20 left-10"*/}
-          {/*/>*/}
 
         </div>
       </section>
@@ -87,7 +82,7 @@ const page = () => {
           <div className="h-[1px] w-[100%] md:w-[60rem] bg-neutral-700 mx-2"></div>
           <Link href={'/discover'} className="text-neutral-400 whitespace-nowrap text-sm">See more</Link>
         </div>
-        {/*<Trending />*/}
+        <Trending/>
       </section>
     </div>
   )
