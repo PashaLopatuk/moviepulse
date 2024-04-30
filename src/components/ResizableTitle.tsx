@@ -29,6 +29,7 @@ const ResizableTitle: FC<ResizableTitle> = (
 
   const resizeCallback = (entry: ResizeObserverEntry) => {
     let fontSize = minFontSize ?? 0
+
     if (ref.current && 'style' in ref.current) {
       fontSize = (entry.contentBoxSize.at(0)?.inlineSize ?? 0)
       fontSize /= defaultFontSize / 10

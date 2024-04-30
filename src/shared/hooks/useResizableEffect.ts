@@ -8,7 +8,7 @@ const useResizableEffect = (callBack: (entry: ResizeObserverEntry) => void, elRe
 
   useLayoutEffect(() => {
     let observerRefValue = null
-
+    console.log('dfsfds')
     resizeObserver.current = new ResizeObserver((entries) => {
       for (const entry of entries) {
         callBack(entry)
@@ -28,5 +28,6 @@ const useResizableEffect = (callBack: (entry: ResizeObserverEntry) => void, elRe
 
   }, [elRef, callBack])
 }
+
 
 export default useResizableEffect

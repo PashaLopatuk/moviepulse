@@ -26,7 +26,7 @@ const MoviePage = async ({params: {movie_id}}: Params) => {
         <ResizableTitle
           text={MovieData?.title}
           minFontSize={16}
-          maxFontSize={50}
+          maxFontSize={80}
           defaultFontSize={16}
         />
 

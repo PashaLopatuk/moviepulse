@@ -16,52 +16,52 @@ export default function SidebarNavigationMenu(
   }) {
   return (
     <div className={twMerge('flex flex-col gap-2', className)}>
-      {routes.map((route, index, arr) => {
-        if (!route.nested) {
-          return (
-            <React.Fragment key={route.name}>
-              <Button
-                variant="ghost"
-                className="justify-start"
-                key={route.name}
-                onClick={() => {
-                  redirect(route.route ?? '')
-                }}
-              >
-                {route.name}
-              </Button>
+      {/*{routes.map((route, index, arr) => {*/}
+      {/*  if (!route.nested) {*/}
+      {/*    return (*/}
+      {/*      <React.Fragment key={route.name}>*/}
+      {/*        <Button*/}
+      {/*          variant="ghost"*/}
+      {/*          className="justify-start"*/}
+      {/*          key={route.name}*/}
+      {/*          onClick={() => {*/}
+      {/*            redirect(route.route ?? '')*/}
+      {/*          }}*/}
+      {/*        >*/}
+      {/*          {route.name}*/}
+      {/*        </Button>*/}
 
-              {index + 1 != arr.length && (
-                <Separator className="mx-4 border-[1px]"/>
-              )}
-            </React.Fragment>
-          );
-        } else {
-          return (
-            <React.Fragment key={route.name}>
-              <div className="flex flex-col gap-2">
-                {route.nested.map((nestedRoute) => {
-                  return (
-                    <Button
-                      variant="ghost"
-                      className="justify-start"
-                      key={nestedRoute.name}
-                      onClick={() => {
+      {/*        {index + 1 != arr.length && (*/}
+      {/*          <Separator className="mx-4 border-[1px]"/>*/}
+      {/*        )}*/}
+      {/*      </React.Fragment>*/}
+      {/*    );*/}
+      {/*  } else {*/}
+      {/*    return (*/}
+      {/*      <React.Fragment key={route.name}>*/}
+      {/*        <div className="flex flex-col gap-2">*/}
+      {/*          {route.nested.map((nestedRoute) => {*/}
+      {/*            return (*/}
+      {/*              <Button*/}
+      {/*                variant="ghost"*/}
+      {/*                className="justify-start"*/}
+      {/*                key={nestedRoute.name}*/}
+      {/*                onClick={() => {*/}
 
-                      }}
-                    >
-                      {nestedRoute.name}
-                    </Button>
-                  );
-                })}
-                {index + 1 != arr.length && (
-                  <Separator className="mx-4 border-[1px]"/>
-                )}
-              </div>
-            </React.Fragment>
-          );
-        }
-      })}
+      {/*                }}*/}
+      {/*              >*/}
+      {/*                {nestedRoute.name}*/}
+      {/*              </Button>*/}
+      {/*            );*/}
+      {/*          })}*/}
+      {/*          {index + 1 != arr.length && (*/}
+      {/*            <Separator className="mx-4 border-[1px]"/>*/}
+      {/*          )}*/}
+      {/*        </div>*/}
+      {/*      </React.Fragment>*/}
+      {/*    );*/}
+      {/*  }*/}
+      {/*})}*/}
     </div>
   );
 }
