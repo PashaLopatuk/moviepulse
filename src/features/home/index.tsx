@@ -4,6 +4,7 @@ import Link from 'next/link'
 import {FireIcon} from "@/shared/assets/icons";
 import {DrivePosterImage, BladeRunnerPosterImage, GrayManPosterImage} from '@/shared/assets/images'
 import Trending from "@/features/home/components/Trending";
+import DynamicTitle from "@/features/home/components/DynamicTitle";
 
 const page = () => {
   return (
@@ -14,9 +15,9 @@ const page = () => {
             lg:gap-20
         ">
         <article className="">
-          <h3 className="font-extrabold text-4xl lg:text-6xl">
-            Find movies
-          </h3>
+
+          <DynamicTitle/>
+
           <h2
             className="font-extrabold text-5xl lg:text-7xl bg-gradient-to-r from-lime-500 via-green-500 to-emerald-700 bg-clip-text text-transparent"
           >TV shows and more</h2>

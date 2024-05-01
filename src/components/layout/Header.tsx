@@ -12,7 +12,7 @@ const Header = () => {
     <header
       className="sticky px-4 py-2 top-0 backdrop-blur-md  border-b-2 border-border flex justify-between items-center gap-2 z-50"
     >
-      <div className="flex items-center justify-between w-full">
+      <div className="flex items-center justify-between w-full max-w-container">
         <Link className="" href={'/'}>
           <LogoIcon className={'h-10 w-10'}/>
         </Link>

@@ -23,7 +23,7 @@ const ResizableTitle: FC<ResizableTitle> = (
 
   const ref = useRef<any>(null)
 
-  const textLength = text?.length ? text.length / 3 : 1
+  const textLength = text?.length ? text.length : 1
 
   console.log('render')
 
@@ -33,7 +33,7 @@ const ResizableTitle: FC<ResizableTitle> = (
     if (ref.current && 'style' in ref.current) {
       fontSize = (entry.contentBoxSize.at(0)?.inlineSize ?? 0)
       fontSize /= defaultFontSize / 10
-      fontSize /= textLength
+      fontSize /= textLength / 2.6
       if (minFontSize && maxFontSize) {
         fontSize = Math.min(Math.max(fontSize, minFontSize), maxFontSize)
       }

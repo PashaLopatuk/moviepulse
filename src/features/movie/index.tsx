@@ -43,8 +43,6 @@ const MoviePage = async ({params: {movie_id}}: Params) => {
 
           <div className="px-1 flex flex-col justify-between md:justify-start">
             <div className="">
-
-
               <h1 className="font-bold text-3xl ml-2">
                 {MovieData?.release_date?.slice(0, 4)}
               </h1>
