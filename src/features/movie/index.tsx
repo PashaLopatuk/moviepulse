@@ -64,10 +64,10 @@ const MoviePage = async ({params: {movie_id}}: Params) => {
               }
             </ul>
             <p
-              className="px-4 text-md text-muted-foreground overflow-hidden whitespace-wrap md:overflow-auto md:whitespace-normal">
+              className="px-4 text-sm md:text-md text-muted-foreground overflow-hidden whitespace-wrap md:overflow-auto md:whitespace-normal">
               {
                 MovieData.overview
-              }..
+              }
             </p>
           </div>
         </div>
