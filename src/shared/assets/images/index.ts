@@ -1,6 +1,6 @@
-import DrivePosterImage from '@/../public/assets/ryan_golsing_1.jpg'
-import BladeRunnerPosterImage from '@/../public/assets/ryan_golsing_2.jpg'
-import GrayManPosterImage from '@/../public/assets/ryan_golsing_3.jpg'
+import DrivePosterImage from '../../../../public/assets/ryan-gosling-1.jpg'
+import BladeRunnerPosterImage from '../../../../public/assets/ryan-gosling-2.jpg'
+import GrayManPosterImage from '../../../../public/assets/ryan-gosling-3.jpg'
 
 export {
   DrivePosterImage,
